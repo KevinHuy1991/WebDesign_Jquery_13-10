@@ -1,0 +1,52 @@
+/* CSS tuỳ biến bổ sung cho Shop Phụ Kiện Điện Thoại Vue.js */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+
+/* Hiệu ứng chuyển động mượt mà cho giỏ hàng và danh sách sản phẩm */
+.cart-item-enter-active,
+.cart-item-leave-active {
+    transition: all 0.3s ease;
+}
+
+.cart-item-enter-from,
+.cart-item-leave-to {
+    opacity: 0;
+}
+
+/* Badge số lượng giỏ hàng rung nhẹ khi có sản phẩm mới */
+@keyframes bounce-short {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.25);
+    }
+}
+
+.cart-bounce {
+    animation: bounce-short 0.3s ease-in-out;
+}
+
+/* Thanh cuộn gọn đẹp cho Aside giỏ hàng khi có nhiều sản phẩm */
+.cart-scroll::-webkit-scrollbar {
+    width: 5px;
+}
+
+.cart-scroll::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+
+.cart-scroll::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 4px;
+}
+
+.cart-scroll::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
